@@ -3,8 +3,9 @@ import web
 urls = (
     '/(.*)', 'index' # root connected to an index class
 )
+render = web.template.render("resources/")
 
-app = web.application(urls,globals())
+app = web.application(urls, globals())
 
 class index:
     def GET(self, name):
